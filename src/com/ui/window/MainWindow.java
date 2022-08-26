@@ -1,6 +1,7 @@
-package com.UI.window;
+package com.ui.window;
 
-import com.UI.menu.DefaultMenu;
+import com.ui.menu.DefaultMenu;
+import com.ui.table.DefaultTable;
 
 public class MainWindow {
     private final DefaultWindow f;
@@ -8,12 +9,16 @@ public class MainWindow {
     private DefaultPane leftPane;
     private DefaultPane rightPane;
     private DefaultPane lowerPane;
+    private DefaultTable invoicesTable;
+    private DefaultTable invoiceItems;
     public MainWindow(String title) {
         f = new DefaultWindow("Sales Invoice Generator");
         m = new DefaultMenu();
         leftPane = new DefaultPane("Invoices Table");
         rightPane = new DefaultPane("Invoice Data");
         lowerPane = new DefaultPane("");
+        invoicesTable = new DefaultTable("Invoices Table");
+        invoiceItems = new DefaultTable("Invoice Items");
     }
 
     public void createWindowFrame(){
@@ -45,5 +50,15 @@ public class MainWindow {
 
     public void createFileMenu(){
         m.createSimpleMenu("File", new String[] {"Open", "Exit"});
+    }
+
+    public void createInvoicesTable(){
+        String[] cols = {"No.", "Date", "Customer", "Total"};
+        String[][] data = {
+                {"1", "12/11/2008", "Mina", "300"},
+                {"2", "12/11/2009", "Ahmed", "400"},
+                {"3", "12/11/2010", "Omar", "500"},
+        };
+        leftPane.add(invoicesTable.createTable(data, cols));
     }
 }

@@ -1,4 +1,4 @@
-package com.UI.menu;
+package com.ui.menu;
 
 import javax.swing.*;
 import java.awt.*;

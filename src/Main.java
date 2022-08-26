@@ -1,4 +1,4 @@
-import com.UI.window.MainWindow;
+import com.ui.window.MainWindow;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,6 +6,7 @@ public class Main {
         window.createWindowComponents();
         window.createFileMenu();
         window.setPaneDimensions();
+        window.createInvoicesTable();
         window.createWindowFrame();
     }
 }

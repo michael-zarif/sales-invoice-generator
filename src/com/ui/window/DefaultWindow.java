@@ -1,6 +1,6 @@
-package com.UI.window;
+package com.ui.window;
 
-import com.UI.listener.DefaultListener;
+import com.ui.listener.DefaultListener;
 
 import javax.swing.*;
 import java.awt.*;

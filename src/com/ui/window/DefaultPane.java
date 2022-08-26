@@ -1,7 +1,6 @@
-package com.UI.window;
+package com.ui.window;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 
 public class DefaultPane extends JPanel{
